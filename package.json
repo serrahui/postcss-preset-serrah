@@ -1,6 +1,6 @@
 {
   "name": "postcss-preset-serrah",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PostCSS preset for Serrah UI",
   "main": "dist/preset.js",
   "types": "dist/index.d.ts",
