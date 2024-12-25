@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mixin-hover transforms hover mixin correctly 1`] = `
+"
+@media (hover: hover) {
+    .demo:hover {
+    color: orange
+    }
+}
+  @media (hover: none) {
+    .demo:active {
+    color: orange
+    }
+}
+"
+`;
+
+exports[`mixin-hover transforms where-hover mixin correctly 1`] = `
+"
+@media (hover: hover) {
+    .demo:where(:hover) {
+    color: orange
+    }
+}
+  @media (hover: none) {
+    .demo:where(:active) {
+    color: orange
+    }
+}
+"
+`;

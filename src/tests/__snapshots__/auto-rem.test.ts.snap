@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`auto-rem does not transform content property 1`] = `
+"
+.demo::before {
+  content: '10px';
+}
+"
+`;
+
+exports[`auto-rem does not transform strings with rgba 1`] = `
+"
+.demo {
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0 0 0 5px inset,
+    rgb(0, 0, 0, 0.15) 0 0 3px inset;
+}
+"
+`;
+
+exports[`auto-rem does not transform url values 1`] = `
+"
+.demo {
+  background: url('https://example.com/10px.png');
+}"
+`;
+
+exports[`auto-rem does not transform values without units 1`] = `
+"
+.demo {
+  flex: 1 0 calc(7.5rem * var(--serrah-scale))
+}
+"
+`;
+
+exports[`auto-rem it transforms input with rem function correctly 1`] = `
+"
+.demo {
+  font-size: calc(1rem * var(--serrah-scale));
+  border: calc(0.0625rem * var(--serrah-scale)) solid red;
+  padding: calc(1rem * var(--serrah-scale));
+}
+"
+`;
+
+exports[`auto-rem it transforms media query correctly 1`] = `
+"
+@media (min-width: 320px) {
+.demo {
+    font-size: calc(2rem * var(--serrah-scale))
+}
+  }
+"
+`;
+
+exports[`auto-rem it transforms px to rem values correctly 1`] = `
+"
+.demo {
+  font-size: calc(1rem * var(--serrah-scale));
+  height: calc(2.5rem * var(--serrah-scale));
+  padding: calc(0.625rem * var(--serrah-scale)) calc(3.125rem * var(--serrah-scale)) calc(1.25rem * var(--serrah-scale)) calc(1.875rem * var(--serrah-scale));
+  background: red;
+  border: calc(0.0625rem * var(--serrah-scale)) solid black;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+"
+`;
+
+exports[`auto-rem transforms coma separated values correctly 1`] = `
+"
+.demo {
+  background-position: 0 0, 0 calc(0.25rem * var(--serrah-scale)), calc(0.25rem * var(--serrah-scale)) calc(-0.25rem * var(--serrah-scale)), calc(-0.25rem * var(--serrah-scale)) 0;
+}
+"
+`;
