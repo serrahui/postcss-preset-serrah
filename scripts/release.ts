@@ -50,7 +50,7 @@ async function release() {
     `Current version: ${chalk.cyan(packageJson.version)}, next version: ${chalk.cyan(nextVersion)}`
   );
 
-  await run(execa('pnpm'), {
+  await run(execa('pnpm', ['install']), {
     info: 'Installing fresh dependencies',
     success: 'Fresh dependencies have been installed',
     error: 'Failed to install fresh dependencies',
